@@ -26,6 +26,9 @@
   ],
   "author": "Michael Gill <michael@gill.works>",
   "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gillworks/claude-speaker.git"
@@ -40,9 +43,6 @@
     "inquirer": "^8.2.6",
     "node-fetch": "^2.7.0",
     "play-sound": "^1.1.6"
-  },
-  "engines": {
-    "node": ">=14.0.0"
   },
   "devDependencies": {
     "eslint": "^8.50.0",
