@@ -58,7 +58,9 @@ npx claude-speaker setup
 
 3. **Configure Claude Code Hooks**
 
-   To configure the hooks, add the following to your Claude Code settings JSON file. This file is typically located in your Claude Code configuration directory, often found at `~/.claude/settings.json` or a similar path depending on your setup:
+   Claude Speaker uses the "Stop" hook to detect when Claude has finished generating a response. When Claude completes its response, the hook checks if the response contains a plan (text starting with "Here is Claude's plan:") and reads it aloud using your configured voice.
+
+   Add the following to your Claude Code settings JSON file (typically `~/.claude/settings.json`):
 
    ```json
    {
@@ -76,6 +78,11 @@ npx claude-speaker setup
      }
    }
    ```
+
+   **Important**: Replace `/path/to/claude-speaker` with the actual path where the package is installed:
+
+   - For global install: Use `$(npm root -g)/claude-speaker/src/hooks/plan-detector.js`
+   - For local install: Use `$(npm root)/claude-speaker/src/hooks/plan-detector.js`
 
 4. **Create Enable/Disable Commands (Optional)**
 

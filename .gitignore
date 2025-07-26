@@ -1,4 +1,11 @@
+# Dependency directories
 node_modules/
+jspm_packages/
+
+# Lock files (for libraries)
+package-lock.json
+
+# TypeScript cache
 .env
 .DS_Store
 *.log
