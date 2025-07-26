@@ -1,0 +1,37 @@
+# Development files
+.env
+.DS_Store
+*.log
+.git/
+.gitignore
+.eslintrc.json
+.github/
+.claude/
+
+# Test files
+test/
+tests/
+*.test.js
+*.spec.js
+coverage/
+.jest/
+
+# Local directories
+.claude-speaker/
+tmp/
+
+# Development scripts
+bin/test-speaker.js
+bin/check-debug.js
+src/hooks/test-hook.js
+src/hooks/plan-detector-debug.js
+
+# Documentation source files
+docs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db

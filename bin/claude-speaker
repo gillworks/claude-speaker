@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+const { Command } = require('commander');
+const { version } = require('../package.json');
+
+const program = new Command();
+
+program
+  .name('claude-speaker')
+  .description('Claude Code plugin that reads plans aloud using ElevenLabs')
+  .version(version);
+
+program
+  .command('setup')
+  .description('Configure ElevenLabs API and voice settings')
+  .action(() => {
+    require('./setup');
+  });
+
+program
+  .command('enable')
+  .description('Enable Claude Speaker')
+  .action(() => {
+    require('./enable-speaker');
+  });
+
+program
+  .command('disable')
+  .description('Disable Claude Speaker')
+  .action(() => {
+    require('./disable-speaker');
+  });
+
+program
+  .command('test')
+  .description('Test Claude Speaker with a sample plan')
+  .action(() => {
+    require('./test-speaker');
+  });
+
+program.parse();
